@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fine Cut - Ihr Friseursalon in Solingen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Fine Cut</h1>
+      <p>Willkommen bei Fine Cut – Ihr moderner Herrenfriseur in Solingen</p>
+    </div>
+  </header>
+
+  <nav class="nav container">
+    <a href="#services" class="nav-link">Dienstleistungen</a>
+    <a href="#prices" class="nav-link">Preise</a>
+    <a href="#gallery" class="nav-link">Galerie</a>
+    <a href="#booking" class="nav-link">Termin buchen</a>
+    <a href="#contact" class="nav-link">Kontakt</a>
+  </nav>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>Über uns</h2>
+      <p>Wir bieten professionelle Haarschnitte, Bartpflege und Styling in Solingen.</p>
+      <ul class="info-list">
+        <li><strong>Adresse:</strong> Konrad-Adenauer-Straße 16, 42651 Solingen</li>
+        <li><strong>Telefon:</strong> <a href="tel:+4915753559559">0157 53559559</a></li>
+        <li><strong>Öffnungszeiten:</strong><br>
+          Montag – Freitag: 8:30 – 19:00<br>
+          Samstag: 8:00 – 17:00
+        </li>
+      </ul>
+    </section>
+
+    <section id="services" class="card">
+      <h2>Dienstleistungen</h2>
+      <ul>
+        <li>Haarschnitt + Bart + Waschen + Färben</li>
+        <li>Haarschnitt Herren</li>
+        <li>Bartpflege</li>
+        <li>Haare waschen</li>
+        <li>Augenbrauen formen</li>
+      </ul>
+    </section>
+
+    <section id="prices" class="card">
+      <h2>Preise</h2>
+      <table class="prices">
+        <thead><tr><th>Dienstleistung</th><th>Preis</th></tr></thead>
+        <tbody>
+          <tr><td>Haarschnitt + Bart</td><td>30€</td></tr>
+          <tr><td>Haarschnitt Herren</td><td>18€</td></tr>
+          <tr><td>Bartpflege</td><td>12€</td></tr>
+          <tr><td>Haare waschen</td><td>3€</td></tr>
+          <tr><td>Augenbrauen</td><td>5€</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>Galerie</h2>
+      <p>Ersetzen Sie diese Platzhalter durch echte Bilder Ihres Salons.</p>
+    </section>
+
+    <section id="booking" class="card">
+      <h2>Termin buchen</h2>
+      <form id="booking-form" action="https://formspree.io/f/yourformid" method="POST">
+        <label>Vollständiger Name</label>
+        <input name="name" required>
+        <label>Telefonnummer</label>
+        <input name="phone" required>
+        <label>Dienstleistung</label>
+        <select name="service">
+          <option>Haarschnitt + Bart</option>
+          <option>Haarschnitt Herren</option>
+          <option>Bartpflege</option>
+          <option>Haare waschen</option>
+          <option>Augenbrauen</option>
+        </select>
+        <label>Datum & Uhrzeit</label>
+        <input type="datetime-local" name="datetime" required>
+        <button type="submit">Termin anfragen</button>
+      </form>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Kontakt</h2>
+      <p><strong>Telefon:</strong> <a href="tel:+4915753559559">0157 53559559</a></p>
+      <p><strong>Adresse:</strong> Konrad-Adenauer-Straße 16, 42651 Solingen</p>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Konrad-Adenauer-Straße+16+42651+Solingen&output=embed" style="width:100%;height:300px;border:0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> Fine Cut – Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('booking-form').addEventListener('submit', function(e){
+      alert('Ihre Terminanfrage wurde gesendet. Wir melden uns bald bei Ihnen.');
+    });
+  </script>
+</body>
+</html>
